@@ -26,6 +26,10 @@ endif()
 add_executable(bench_layout
   src/bench_layout.cpp
 )
+
+add_executable(verify_layout
+  src/verify_layout.cpp)
+target_include_directories(verify_layout PRIVATE include)
 target_include_directories(bench_layout PRIVATE include)
 target_link_libraries(bench_layout PRIVATE benchmark::benchmark)
 
